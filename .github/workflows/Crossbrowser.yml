@@ -1,4 +1,4 @@
-name: Testim E2E
+ name: Testim E2E
 on: [push]
 
 jobs:
@@ -8,7 +8,8 @@ jobs:
             - uses: actions/checkout@v2
             - uses: actions/setup-node@v4
               with:
-                node-version: '22.14.0'
+                node-version: 22.14.0
                 # You can also change 'lts' to any supported LTS Node.js version.
             - run: npm install -g @testim/testim-cli
-            - run: testim --token "1UirXpOB5K37HMxV3yK1f9iu0a5x26C2HA5E5jWNMJObLS6sE3" --project "9sSkgSujJmdD3xYQFFLl" --grid "testim-ha-grid" --test-plan "Cross Browser 4Pines"
+            - run: testim --token "1UirXpOB5K37HMxV3yK1f9iu0a5x26C2HA5E5jWNMJObLS6sE3" --project "9sSkgSujJmdD3xYQFFLl" --grid "testim-ha-grid" --label "4Pines"
+
